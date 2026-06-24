@@ -18,45 +18,55 @@
 
 ---
 
-### 🔍 SME Feedback from the Break Through Tech Evaluation Team
+## 📋 BTT Internal Evaluation Notes
 
-*Challenge Advisor: Please address the following feedback by editing this page. Your AI Studio Coach can help make project adjustments as needed, too. In addition to the grey section above, this section should be removed before sharing the repo with your student team.*
+| Check | Status | Notes |
+|-------|--------|-------|
+| Python Compatibility | GREEN | The project's tech stack is centered on Python, particularly due to the use of RAG techniques and NLP tools which are available in Python libraries. |
+| Data Readiness | YELLOW | Data is publicly available and under 1GB, but will require cleaning and preprocessing for effective use. This introduces some risks in the initial phases of the project. |
+| Resource Check | GREEN | The project is designed to be feasible using the free tier of Google Colab, which is accessible and eliminates hardware constraints. |
+
+**Student Fit Score:** 7/10  
+**Technical Depth Score:** 8/10  
+**Overall Recommendation:** REVISE
+
+**Advisor Feedback Draft:**
+The project presents a viable opportunity for students to engage with the complexities of NLP and model evaluation. However, they must be prepared for potential delays in data processing and a need for rigorous evaluation against success metrics.
 
 ---
 
-# [Project Title]
+# AI Research Intelligence Agent for Business Insight Translation
 
-**Company / Org:** [Company / Org Name]  
-**Challenge Advisor:** [Name, Title, Email]  
+**Company / Org:** KPMG  
+**Challenge Advisor:** Agnieszka Jeter, ajeter@kpmg.com  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
 
-## 🏢 About [Company / Org Name]
+## 🏢 About KPMG
 
-[2-3 sentences about your company: what you do, your industry, etc. You may also choose to specify your specific department or team.]
+KPMG is a global leader in audit, tax, and advisory services, providing insights and expertise to a diverse clientele across various industries. Our commitment to innovation drives us to integrate technology into our solutions, enhancing business performance and fostering success.
 
 ---
 
 ## 🎯 The Challenge
 
 ### Project Summary
-[In 2-3 sentences, describe what you're asking the team to do. Be specific about the type of data, ML techniques, and potential impact.]
-
-> **Example:** "In this project, your team will use customer transaction data and classification algorithms to build a model that predicts which users are likely to churn. This will help our retention team prioritize outreach."
+In this project, you will use publicly available AI research data (e.g., arXiv papers and metadata) and retrieval-augmented generation (RAG) techniques with large language models to build an agent that retrieves relevant research, summarizes key findings, and translates them into business-relevant insights. This will help our organization address the challenge of efficiently monitoring and operationalizing the rapidly growing volume of AI research. Abhinav Raghunathan will serve as the KPMG business owner / Challenge Advisor for the project, responsible for guiding business relevance, success criteria, and stakeholder feedback.
 
 ### Success Criteria
-[What does success look like? Describe evaluation metrics (accuracy, F1 score, etc.) or qualitative outcomes that would make this project valuable to your company.]
+Success will be measured based on: Retrieval relevance: Ability to return appropriate research papers for a given query; Summary quality: Accuracy and clarity of synthesized research insights; Business usefulness: Extent to which outputs translate technical content into actionable business implications; Human evaluation: Validation by KPMG stakeholders reviewing relevance and accuracy of outputs; Human-in-the-loop checkpoint: KPMG stakeholders will review retrieved sources, summaries, and business implications before outputs are used for internal decision-making, thought leadership, or client-facing discussions. A successful outcome will be: A working prototype that enables natural-language querying of AI research and produces summarized, business-relevant outputs with citations; Documented evaluation approach and results; Demonstrated applicability for internal enablement and client conversations; A final solution package that includes prototype documentation, evaluation results, scope limitations, and a final presentation suitable for stakeholder review.
 
 ### Project Milestones
 
 Use these milestones to guide your work. Your team will create a **GitHub Projects board** to track tasks within each milestone.
 
-| Month | Milestone | Key Activities |
-|-------|-----------|----------------|
-| **September** | [e.g., Data Understanding] | [e.g., Explore dataset, handle missing values, document findings] |
-| **October** | [e.g., Model Development] | [e.g., Train baseline model, experiment with approaches, iterate] |
-| **November** | [e.g., Evaluation & Presentation] | [e.g., Finalize model, prepare presentation, document results] |
+| Month     | Milestone                  | Key Activities                                                              |
+|-----------|----------------------------|---------------------------------------------------------------------------|
+| **September** | Data Exploration         | Explore dataset, define evaluation framework, benchmark queries, develop baseline retrieval pipeline (RAG setup) |
+| **October**   | Implement Retrieval + Summarization | Implement retrieval + summarization pipeline, develop prompt engineering approach for business translation, begin evaluation (relevance and accuracy testing) |
+| **November**  | Model Refinement         | Refine model outputs and improve ranking/relevance, build user interface, document solution and prepare final presentation |
+| **December**  | Final Deliverables       | A working prototype, documented evaluation, demonstrated applicability, and final solution package |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -64,13 +74,13 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 📊 Dataset
 
-**Name and Source:** [Dataset name and where it's from]  
-**Format:** [e.g., CSV, JSON, images]  
-**Size:** [Approximate size in MB/GB]  
+**Name and Source:** Publicly available AI research data from [arXiv](https://arxiv.org/)  
+**Format:** Categorical and Text, primarily in PDF format  
+**Size:** under 1gb  
 **Location:** [Link to dataset or instructions for accessing it]
 
 ### Key Details
-- [Brief description of what's in the data]
+- Publicly available AI research data (e.g., arXiv papers and metadata) from https://arxiv.org/. The data is Categorical and Text, primarily in PDF format. Partial documentation exists, and it will require some cleaning/preprocessing.
 - [Any known limitations or preprocessing needed]
 - [Link to data dictionary or documentation, if available]
 
@@ -78,13 +88,21 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** [e.g., Classification, Regression, NLP, Computer Vision, LLM/RAG]
+**ML Problem Type:** NLP / Retrieval-augmented Generation
 
 **Recommended Libraries:**
-- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+- Retrieval-augmented generation (RAG) techniques
+- large language models (LLMs)
+- Natural Language Processing (NLP)
+- Generative Models
+- Transfer Learning / Pre-trained Models
 
 **Evaluation Metrics:**
-- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
+- Retrieval relevance
+- Summary quality
+- Business usefulness
+- Human evaluation
+- Business impact assessment
 
 ---
 
@@ -93,19 +111,19 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 The following resources will help your team understand the problem space and potential technical approaches for this project:
 
 **Background Reading:**
-- [e.g., Link to an article or blog post about the problem domain]
-- [e.g., Link to an industry report or case study]
+- [Introduction to Retrieval-Augmented Generation](https://example-link.com)
+- [The Growing Importance of AI Research in Business](https://example-link.com)
 
 **Technical Tutorials:**
-- [e.g., Link to a free tutorial on the ML technique(s) involved]
-- [e.g., Link to documentation for a key library or tool]
+- [Getting Started with NLP](https://example-link.com)
+- [Guide to RAG Techniques](https://example-link.com)
 
 **Code Examples:**
-- [e.g., Link to a relevant GitHub repo]
-- [e.g., Link to a sample implementation or starter code]
+- [GitHub: RAG Example Repo](https://github.com/example/repo)
+- [Sample Implementation of NLP Techniques](https://example-link.com)
 
 **Other:**
-- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
+- [Papers on RAG and NLP Models](https://example-link.com)
 
 *Feel free to explore beyond these, and share anything interesting you find with me!*
 
@@ -114,13 +132,13 @@ The following resources will help your team understand the problem space and pot
 ## 🤝 How We'll Work Together
 
 **Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** [e.g., Slack (Break Through Tech workspace) or email]  
-**Response time:** [e.g., Within 48 hours on weekdays]  
+**Communication:** Slack (Break Through Tech workspace) or email  
+**Response time:** Within 48 hours on weekdays  
 
 **Recommended Tools:**
-- **Coding:** [e.g., Google Colab, VS Code]
-- **Collaboration:** [e.g., GitHub, Notion]
-- **Virtual Meetings:** [e.g., Zoom, Google Meet]
+- **Coding:** Google Colab, VS Code
+- **Collaboration:** GitHub, Notion
+- **Virtual Meetings:** Zoom, Google Meet
 
 ---
 
@@ -130,10 +148,10 @@ The following resources will help your team understand the problem space and pot
 2. **Begin reviewing the dataset** using the link above
 3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
-I’m excited to work with you!
+I'm excited to work with you!
 
 ---
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session B). 
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
